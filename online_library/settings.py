@@ -3,8 +3,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'django-insecure-your-secret-key-here'
-# Remove or comment out this line if you don't need it:
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 DEBUG = True
  
 ALLOWED_HOSTS = []
@@ -17,9 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'library.apps.LibraryConfig',
-    # Either this simple version
-    # or 'library.apps.LibraryConfig',  # This more explicit version
-    # Both should work, but you must choose one
+ 
 ]
 
 
