@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import Author, Book, BorrowRecord
-
-# Remove any duplicate @admin.register decorators or admin.site.register() calls
+from .models import Author, Book, BorrowRecor
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'bio')
