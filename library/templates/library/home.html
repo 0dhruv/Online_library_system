@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Authors</h5>
+                <a href="{% url 'author_list' %}" class="btn btn-primary">View Authors</a>
+                <a href="{% url 'author_add' %}" class="btn btn-success">Add Author</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Books</h5>
+                <a href="{% url 'book_list' %}" class="btn btn-primary">View Books</a>
+                <a href="{% url 'book_add' %}" class="btn btn-success">Add Book</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Borrow Records</h5>
+                <a href="{% url 'borrowrecord_list' %}" class="btn btn-primary">View Records</a>
+                <a href="{% url 'borrowrecord_add' %}" class="btn btn-success">Add Record</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

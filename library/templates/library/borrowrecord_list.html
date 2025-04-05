@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Borrow Records</h1>
+<a href="{% url 'borrowrecord_add' %}" class="btn btn-primary mb-3" target="_blank">Add Borrow Record</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Book</th>
+            <th>Borrow Date</th>
+            <th>Return Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in object_list %}
+        <tr>
+            <td>{{ record.user_name }}</td>
+            <td>{{ record.book.title }}</td>
+            <td>{{ record.borrow_date }}</td>
+            <td>{{ record.return_date|default:"Not returned" }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% include 'pagination.html' %}
+
+<a href="{% url 'export_to_excel' %}" class="btn btn-success mt-3">Export to Excel</a>
+{% endblock %}
